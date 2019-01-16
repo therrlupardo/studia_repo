@@ -1,0 +1,9 @@
+Z AVX:
+Inicjalizacja
+Początek obliczeń MAXFLOPS_ITERS
+GFlops =     25.600, secs =      8.47
+
+Bez AVX:
+Inicjalizacja
+Początek obliczeń MAXFLOPS_ITERS
+GFlops =     25.600, secs =     30.84

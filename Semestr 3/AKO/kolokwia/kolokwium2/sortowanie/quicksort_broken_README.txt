@@ -1,0 +1,2 @@
+Nie ma gwarancji, że kod działa. W zadaniu podano założenie, że mamy dostęp do funkcji int dzielTablice(double* tablica, int l, int r), która wybiera jakiś element tablicy i wrzuca wszystkie elementy mniejsze od niego na lewo, większe/równe na prawo i zwraca końcowy indeks tego elementu. 
+Bez tej funkcji kod nie będzie działać.
