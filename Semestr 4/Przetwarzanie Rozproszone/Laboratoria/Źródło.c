@@ -132,6 +132,7 @@ int insert(struct list* lista, int value, int position)
 	tmp->prev = it->prev;
 	it->prev->next = tmp;
 	it->prev = tmp;
+
 	return 1;
 }
 
@@ -220,6 +221,7 @@ int main()
 		}
 	//	print(lista, true);
 	} while (strcmp(command,"koniec")!=0);
-
+	free(lista);
+	free(command);
 	return 0;
 }
