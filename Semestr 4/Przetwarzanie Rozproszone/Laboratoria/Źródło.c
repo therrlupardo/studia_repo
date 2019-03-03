@@ -76,6 +76,7 @@ int print(struct list* lista, bool backwards)
 {
 	if(lista->head == NULL)
 	{
+		printf("Lista jest pusta!\n");
 		return 0;
 	}
 	struct node* it;
@@ -105,7 +106,11 @@ int print(struct list* lista, bool backwards)
 int insert(struct list* lista, int value, int position)
 {
 	struct node* it, * tmp;
-	if (lista->head == NULL) return 0;
+	if (lista->head == NULL) {
+		if (position != 0) return 0;
+		push(lista, value);
+		return 1;
+	}
 	it = lista->head;
 	tmp = malloc(sizeof(struct node));
 	if(position == 0)
@@ -141,6 +146,11 @@ int remove(struct list* lista, int position)
 	if (lista->head == NULL) return 0;
 	if(position == 0)
 	{
+		if(lista->head->next == lista->head)
+		{
+			pop(lista);
+			return 1;
+		}
 		lista->tail->next = lista->head->next;
 		lista->head->next->prev = lista->tail;
 		lista->head = lista->head->next;
@@ -157,6 +167,10 @@ int remove(struct list* lista, int position)
 		}
 		it->prev->next = it->next;
 		it->next->prev = it->prev;
+		if(it == lista->tail)
+		{
+			lista->tail = lista->tail->prev;
+		}
 		return 1;
 	}
 }
@@ -218,6 +232,10 @@ int main()
 			{
 				printf("Operacja nieudana!\n");
 			}
+		}
+		else if(strcmp(command, "help") == 0)
+		{
+			printf("Lista dostepnych komend:\npush x - umieszcza wartosc x na koncu listy\npop - usuwa ostatni element listy\nprint true - wypisuje kolejne elementy listy\nprint false - wypisuje elementy listy od konca\ninsert x n - umieszcza wartosc x na n-tym miejscu listy(liczac od 0)\nremove n - usuwa n-ty element listy (liczac od 0)\nkoniec - zamyka program\n");
 		}
 	//	print(lista, true);
 	} while (strcmp(command,"koniec")!=0);
