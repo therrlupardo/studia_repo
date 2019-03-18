@@ -1,0 +1,15 @@
+rodzice(adam,ewa,piotr,m).
+rodzice(adam,ewa,aleksandra,k).
+rodzice(adam,ewa,katarzyna,k).
+rodzice(piotr,dorota,tomasz,m).
+rodzice(piotr,dorota,wojciech,m).
+rodzice(jan,katarzyna,mariusz,m).
+rodzice(jan,katarzyna,tadeusz,m).
+rodzice(jan,katarzyna,barbara,k).
+rodzice(mariusz,zofia,andrzej,m).
+rodzice(wojciech,marta,stefan,m).
+rodzice(wojciech,marta,jozef,m).
+rodzice(jozef,barbara,szczepan,m).
+rodzice(szczepan,jozefa,lucjan,m).
+rodzice(andrzej,monika,wanda,k).
+rodzice(andrzej,monika,krystyna,k).
