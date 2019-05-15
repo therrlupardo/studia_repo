@@ -20,7 +20,7 @@ public class Producent extends Thread {
                     log("Wyprodukowano " + amount + " " + this.produkt);
                 }
                 else if(output != -1){
-                    log("Wyprodukowano " + amount + " " + this.produkt+ ". Nie było więcej miejsca.");
+                    log("Wyprodukowano tylko " + amount + " " + this.produkt+ ". Nie było więcej miejsca.");
                 }
                 else{
                     log("Produkcja " + amount + " " + this.produkt + " nie powiodła się");

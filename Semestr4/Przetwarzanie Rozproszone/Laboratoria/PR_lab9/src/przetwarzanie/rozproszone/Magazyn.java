@@ -8,84 +8,97 @@ public class Magazyn extends Thread {
     private Map<Produkty, Integer> magazyn;
     private Integer max_capacity;
     private Integer amount_in_store;
+
     @Override
-    public void run(){
+    public void run() {
         log("Magazyn startuje");
     }
 
-    private void log(String text){
+    private void log(String text) {
         System.out.println("MAGAZYN:       " + text);
     }
 
-    Magazyn(){
+    Magazyn() {
         this.magazyn = new HashMap<>();
         this.max_capacity = 100;
         this.amount_in_store = 0;
     }
 
-    public synchronized Integer OdbierzProdukt(Produkty produkt, Integer amount){
-        if(this.magazyn.containsKey(produkt)){
-            Integer value = this.magazyn.get(produkt);
-            if(this.amount_in_store + amount <= this.max_capacity){
+    synchronized Integer OdbierzProdukt(Produkty produkt, Integer amount) {
+        if (this.magazyn.containsKey(produkt)) {
+            if (this.amount_in_store + amount <= this.max_capacity) {
                 this.amount_in_store += amount;
-                value += amount;
-            }
-            else {
-                value += this.max_capacity - this.amount_in_store;
-                this.amount_in_store = this.max_capacity;
-            }
-            if(!value.equals(0)){
+                Integer value = amount + this.magazyn.get(produkt);
                 this.magazyn.remove(produkt);
                 this.magazyn.put(produkt, value);
-                log("Dodano " + value + " produktu " + produkt + " do mogazynu");
-                log("W magazynie jest aktualnie " + this.amount_in_store + " produktów: ");
-                for(Map.Entry<Produkty, Integer> entry : this.magazyn.entrySet()){
-                    log(entry.getKey() + ": "+ entry.getValue());
-                }
-                return value;
-            }
-            else{
-                return -1;
-            }
-        }
-        else{
-            if(this.amount_in_store + amount <= this.max_capacity){
-                this.amount_in_store += amount;
-                this.magazyn.put(produkt, amount);
+                printStore();
                 log("Dodano " + amount + " produktu " + produkt + " do mogazynu");
                 return amount;
+            } else if (!this.amount_in_store.equals(this.max_capacity)) {
+                Integer value = this.max_capacity - this.amount_in_store;
+                this.amount_in_store = this.max_capacity;
+                value += this.magazyn.get(produkt);
+                this.magazyn.remove(produkt);
+                this.magazyn.put(produkt, value);
+                log("Dodano " + value + " produktu " + produkt + " do mogazynu. Magazyn jest pelny.");
+                printStore();
+                return value;
             }
-            else if (!this.amount_in_store.equals(this.max_capacity)){
+            else {
+                log("Magazyn jest pelny.");
+                return -1;
+            }
+        } else {
+            if (this.amount_in_store + amount <= this.max_capacity) {
+                this.amount_in_store += amount;
+                this.magazyn.put(produkt, amount);
+                log("Dodano " + amount + " produktu " + produkt + " do mogazynu niezawierajacego tego produktu");
+                return amount;
+            } else if (!this.amount_in_store.equals(this.max_capacity)) {
                 Integer value = this.max_capacity - this.amount_in_store;
                 this.magazyn.put(produkt, value);
                 this.amount_in_store = this.max_capacity;
-                log("Dodano " + value + " produktu " + produkt + " do mogazynu");
+                log("Dodano " + value + " produktu " + produkt + " do mogazynu niezawierajacego tego produktu. Magazyn pelny");
                 return value;
             }
-            return -1;
+            else{
+                log("Magazyn pelny.");
+                return -1;
+            }
+
         }
 
     }
 
-    public synchronized Integer WydajProdukt(Produkty produkt, Integer amount){
-        if(this.magazyn.containsKey(produkt)){
-            if(this.magazyn.get(produkt) >= amount){
+    private void printStore() {
+        log("W magazynie jest aktualnie " + this.amount_in_store + " produktów: ");
+        for (Map.Entry<Produkty, Integer> entry : this.magazyn.entrySet()) {
+            log(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+
+    synchronized Integer WydajProdukt(Produkty produkt, Integer amount) {
+        if (this.magazyn.containsKey(produkt)) {
+            if (this.magazyn.get(produkt) >= amount) {
                 Integer value = this.magazyn.get(produkt);
                 this.magazyn.remove(produkt);
-                this.magazyn.put(produkt, value-amount);
+                if(value-amount != 0) {
+                    this.magazyn.put(produkt, value - amount);
+                }
                 this.amount_in_store -= amount;
                 log("Sprzedano " + amount + " " + produkt);
+                log("W magazynie zostało " + this.amount_in_store + " produktów");
                 return amount; // return true
-            }
-            else {
+            } else {
                 Integer value = this.magazyn.get(produkt);
                 this.magazyn.remove(produkt);
-                log("Sprzedano " + value + " " + produkt);
+                log("Sprzedano " + value + " " + produkt +". Nie ma juz tego produktu w magazynie");
+                log("W magazynie zostało " + this.amount_in_store + " produktów");
                 this.amount_in_store -= value;
                 return value; // return true
             }
-        }
-        else {
+        } else {
+            log("W magazynie nie ma żadnego " + produkt);
             return -1;
         }
     }
