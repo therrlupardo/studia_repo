@@ -1,0 +1,11 @@
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\obj\Debug\netcoreapp2.1\laboratorium_7.csprojAssemblyReference.cache
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\obj\Debug\netcoreapp2.1\laboratorium_7.csproj.CoreCompileInputs.cache
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\obj\Debug\netcoreapp2.1\laboratorium_7.AssemblyInfoInputs.cache
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\obj\Debug\netcoreapp2.1\laboratorium_7.AssemblyInfo.cs
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\bin\Debug\netcoreapp2.1\laboratorium_7.deps.json
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\bin\Debug\netcoreapp2.1\laboratorium_7.runtimeconfig.json
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\bin\Debug\netcoreapp2.1\laboratorium_7.runtimeconfig.dev.json
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\bin\Debug\netcoreapp2.1\laboratorium_7.dll
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\bin\Debug\netcoreapp2.1\laboratorium_7.pdb
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\obj\Debug\netcoreapp2.1\laboratorium_7.dll
+C:\Users\thehe\Desktop\Programming\platformyTechnologiczne\C#\laboratorium_7\laboratorium_7\obj\Debug\netcoreapp2.1\laboratorium_7.pdb

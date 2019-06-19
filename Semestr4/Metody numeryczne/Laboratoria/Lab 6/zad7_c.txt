@@ -1,0 +1,4 @@
+Aby automatycznie okreslac odpowiednia wartosc rzedu aproksymacji N
+(bazujac na wykresie bledu), nalezy porównac wartosc bledu
+z jakas okreslona granica. Jezli blad jest mniejszy od tej
+wartosci, aprokymacja przyjmowana jest jako wystarczajaco dokladna.

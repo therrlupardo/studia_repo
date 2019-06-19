@@ -1,0 +1,30 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="722.36">
+    <Grid Background="LightGray" Margin="0,0,2,0">
+        <Canvas x:Name="MyCanvas" Background="White" HorizontalAlignment="Left" Height="399"
+                Margin="10,10,0,0" VerticalAlignment="Top" Width="520"
+                MouseDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" MouseUp="Canvas_MouseUp" />
+
+        <Label Content="IP" HorizontalAlignment="Left" Margin="545,7,0,0" VerticalAlignment="Top"/>
+        <Label Content="Port" HorizontalAlignment="Left" Margin="545,38,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="TextBoxIp" HorizontalAlignment="Left" Height="23" Margin="582,10,0,0" TextWrapping="Wrap" Text="localhost" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="TextBoxPort" HorizontalAlignment="Left" Height="23" Margin="582,41,0,0" TextWrapping="Wrap" Text="7777" VerticalAlignment="Top" Width="120"/>
+
+        <Button x:Name="ButtonConnect" Content="Connect" HorizontalAlignment="Left" Margin="545,109,0,0" VerticalAlignment="Top" Width="75" Click="ButtonClick_Connect"/>
+        <Button x:Name="ButtonDisconnect" Content="Disconnect" HorizontalAlignment="Left" Margin="627,109,0,0" VerticalAlignment="Top" Width="75" Click="ButtonClick_Disconnect"/>
+
+        <TextBox x:Name="TextBoxStatus" IsEnabled="False" HorizontalAlignment="Left" TextAlignment="Center" Height="23" Margin="545,134,0,0" TextWrapping="Wrap" Text="Disconnected" VerticalAlignment="Top" Width="157"/>
+
+        <Rectangle x:Name="RectangleColor" MouseDown="ButtonClick_Color" Fill="Black" HorizontalAlignment="Left" Height="84" Margin="545,325,0,0" Stroke="Black" VerticalAlignment="Top" Width="157"/>
+        
+
+
+</Grid>
+</Window>

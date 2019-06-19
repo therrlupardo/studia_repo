@@ -1,0 +1,2 @@
+Losujac 10^5 punktow, oko?o 12400 znajduje sie powyzej dna jeziora.
+Przyblizona objetosc jeziora to 61770 metrow szesciennych.

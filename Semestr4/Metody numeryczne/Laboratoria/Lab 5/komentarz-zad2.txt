@@ -1,0 +1,3 @@
+W przypadku interpolacji trygonometrycznej widaæ, ¿e im wiêksza liczba punktów, tym wiêksza dok³adnegoœæ interpolacji.
+W przypadku interpolacji wielomianowej widaæ, ¿e zwiêkszenie liczby punktów pomiarowych nie zwiêksza dok³adnoœci, a nawet funkcja wydaje siê byæ interpolowana coraz gorzej.
+Wniosek: interpolacja trygonometryczna jest dok³adniejsza od interpolacji wielomianowej.

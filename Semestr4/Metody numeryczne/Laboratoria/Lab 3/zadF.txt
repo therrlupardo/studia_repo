@@ -1,0 +1,5 @@
+Z trzech wykorzystanych metod najszybsza okaza?a si? metoda Gaussa-Seidla, 
+wykonujaca obliczenia oko?o 2 razy szybciej ni? metoda Jacobiego 
+i blisko 70 razy szybciej ni? metoda bezpo?renia.
+Z metod iteracyjnych metoda Gaussa-Seidla potrzebuje mniej iteracji (oko?o 110),
+natomiast metoda Jacobiego oko?o 210.

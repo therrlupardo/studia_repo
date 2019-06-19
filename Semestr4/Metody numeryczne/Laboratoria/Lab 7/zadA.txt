@@ -1,0 +1,4 @@
+Metoda prostokatow jest najszybsza, ale najmniej dokladna. 
+Metoda trapezow jest wolniejsza, ale dokladniejsza.
+Metoda simpsona jest najwolniejsza z wymienionych powy?ej, ale dok?adniejsza.
+Metoda Monte Carlo jest podobnie szybka do metody trapezow, ale ma gorsza dokladnosc.

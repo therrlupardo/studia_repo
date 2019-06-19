@@ -1,0 +1,1 @@
+Sypek dał za to 4.6/6.

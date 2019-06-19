@@ -1,0 +1,3 @@
+Lepiej korzystac z aproksymacji, poniewaz wsród danych 
+moze pojawic sie blad (w tresci zadania 2 podany jest blad okolo 5%).
+Interpolacja bylaby lepsza, gdyby dane byly dokladne.

@@ -1,0 +1,7 @@
+Efekt Rungego.
+Dla zbyt wielu punktów tworza sie oscylacje na krawedziach, ale
+w srodku przedzialu wartosci sa dokladnie przyblizane. Aby uniknac tego 
+efektu mozna przyblizac w ten sposób tylko dany przedzial i odrzucac
+krawedzie. Powtarzac az uzyskamy zadowalajace przyblizenie.
+Mozna tez obliczac wartosc bledu, jesli przekracza okreslona z gory
+wartosc, to nalezy przerwac obliczenia.

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <HBox maxWidth="1.7976931348623157E308" minWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER_LEFT">
+                <Button fx:id="threadsButton" onAction="#toggleThreads" text="Threads: 1"/>
+            </HBox>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="imagesTableView" minWidth="600.0">
+            <columns>
+                <TableColumn fx:id="imageNameColumn" maxWidth="1.7976931348623157E308" minWidth="400.0" prefWidth="-1.0"
+                             text="Image"/>
+                <TableColumn fx:id="progressColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0"
+                             text="Progress"/>
+                <TableColumn fx:id="statusColumn" maxWidth="80.0" minWidth="80.0" text="Status"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox alignment="TOP_RIGHT" maxWidth="1.7976931348623157E308" minWidth="600.0" spacing="5.0"
+              BorderPane.alignment="CENTER">
+            <Region prefWidth="10.0" HBox.hgrow="ALWAYS"/>
+            <Label fx:id="statusLabel" alignment="CENTER" prefWidth="200.0" text="Ready." HBox.hgrow="ALWAYS">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </padding>
+            </Label>
+            <Region prefWidth="10.0" HBox.hgrow="ALWAYS"/>
+            <HBox alignment="CENTER_RIGHT" spacing="5.0">
+                <Button fx:id="selectFilesButton" onAction="#selectSourceFiles" text="Select files"/>
+                <Button fx:id="selectDirectoryButton" onAction="#selectTargetDirectory"
+                        text="Choose destination folder"/>
+            </HBox>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

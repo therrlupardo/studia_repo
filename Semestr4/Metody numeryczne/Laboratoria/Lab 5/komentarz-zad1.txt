@@ -1,0 +1,3 @@
+Porównuj¹c wykresy wygenerowane za pomoc¹ interpolacji wielomianowej i trygonometrycznej
+mo¿emy zauwa¿yæ, ¿e wraz ze zwiêkszaniem wartoœci K zwiêksza siê dok³adnoœæ wyznaczanej funkcji,
+jednak mo¿na te¿ zauwa¿yæ, ¿e dok³adnoœæ interpolacji wielomianowej jest lepsza w œrodku, a na punktach zewnêtrznych wartoœæ ulega znacznym oscylacjom, przez co odbiega od wartoœci dok³adnej. Mo¿e to byæ wynikiem zastosowania wielomianów zbyt wysokiego stopnia (efekt Rungego).
