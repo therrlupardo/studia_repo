@@ -1,0 +1,5 @@
+Szacowane prawdopodobieństwo spełnienia warunków: 2.6%
+Czynniki wpływające na wynik szacowanego prawdopodonieństwa:
+- ilość wylosowanych par liczb z podanych przedziałów (tu 100.000)
+- dokładność funkcji losującej
+- ilość przeprowadzonych testów
